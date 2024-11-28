@@ -1,3 +1,14 @@
+#mi permette di visualizzare in output le liste i libri che richiede l'utente
+def visualizzaListe(lista):
+
+    #print("I libri disponibili sono: ", listaLibri)
+    i = int (1)
+    
+    print(" ")
+    for el in lista:
+        print(i, ") ", el)
+        i = i +1
+    print(" ")
 
 #mi permette di aggiungere un libro alla lista di libri
 def Aggiungi (listaLibri):
@@ -6,20 +17,19 @@ def Aggiungi (listaLibri):
 
     if aggiuntaLibro in listaLibri:
 
-        print("Libro gia' presente nella lista")
+        print("Libro gia' presente nella lista\n")
 
     else: 
 
         listaLibri.append(aggiuntaLibro)
-        print("E' stato aggiunto:'"+ aggiuntaLibro, "alla lista")
+        print("E' stato aggiunto:'"+ aggiuntaLibro, "alla lista\n")
     
-    print(" ")
-    DisponibilitàLibreria(listaLibri)
+        visualizzaListe(listaLibri)
 
 
 #mi permette di togliere un libro alla lista di libri e aggioungerlo alla lista degli occupati
 def Prestito (listaLibri, listaPrestati):
-
+    visualizzaListe(listaLibri)
     prestitoLibro = input ("Quale libro viene dato in prestito? (Aggiungi i dati) ")
 
     if prestitoLibro in listaLibri:
@@ -57,7 +67,7 @@ def DisponibilitàLibro(listaLibri, listaPrestati):
         if risposta == "Si" or risposta=="si":
             Prestito(listaLibri, listaPrestati)
         elif risposta == "No" or risposta=="no":
-            print("D'accordo, buona giornata.")
+            print("D'accordo, buona giornata.\n")
 
     elif richiesta in listaPrestati:
 
@@ -65,44 +75,26 @@ def DisponibilitàLibro(listaLibri, listaPrestati):
 
     else:
 
-        print("Il libro non si trova nel nostro database, mi spiace")
-
-#mi permette di vedere la disponibilità dei nostri libri liberi al momento
-def DisponibilitàLibreria(listaLibri):
-
-    #print("I libri disponibili sono: ", listaLibri)
-    i = int (1)
-    for el in listaLibri:
-        print(i, ") ", el)
-        i = i +1
-    
-
-#mi permette di vedere i nostri libri occupati al momento
-def LibriOccupati(listaPrestati):
-    
-    #print("I libri occupati sono: ", listaPrestati)
-    i = int (1)
-    for el in listaPrestati:
-        print(i, ") ", el)
-        i = i +1
+        print("Il libro non si trova nel nostro database, mi spiace\n")
 
 #operazioni possibili
 def Operazioni(scelta, listaLibri, listaPrestati):
-    if scelta == 1 :
+    if scelta == "1" :
         Aggiungi(listaLibri)
+        
+    elif scelta == "2":
+        Prestito(listaLibri, listaPrestati)
 
-    elif scelta == 2:
-        Prestito (listaLibri, listaPrestati)
+    elif scelta == "3":
+        Riporta(listaLibri, listaPrestati)
 
-    elif scelta == 3:
-        Riporta (listaLibri, listaPrestati)
+    elif scelta == "4":
+        DisponibilitàLibro(listaLibri, listaPrestati)
 
-    elif scelta == 4:
-        DisponibilitàLibro (listaLibri, listaPrestati)
+    elif scelta == "5":
+        visualizzaListe(listaLibri)
 
-    elif scelta == 5:
-        DisponibilitàLibreria (listaLibri, listaPrestati)
+    elif scelta == "6":
+        visualizzaListe(listaPrestati)
 
-    elif scelta == 6:
-        LibriOccupati (listaPrestati)
 

@@ -8,7 +8,7 @@ def visualizzaListe(lista):
     print(" ")
     for el in lista:
         print(i, ") ", el)
-        i = i +1
+        i = i + 1
     print(" ")
 
 #scelta 1

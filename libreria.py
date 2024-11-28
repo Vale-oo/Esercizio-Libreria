@@ -6,8 +6,8 @@ print("\nBuongiorno e benvenuto, quale operazione desidera effettuare oggi sul s
 
 
 
-listaLibri = ["libro1", "libro2", "libro3"]
-listaPrestati = ["prestato1", "prestato2", "prestato3"]
+listaLibri = ["Harry Potter e la Pietra Filosofale", "Le cronache di Narnia", "Il signore degli Anelli"]
+listaPrestati = ["Interstellar", "La carica dei 101", "Le mille e una notte"]
 
 scelta = input() #scegli cosa vuoi fare tramite digitazione di numero in input dall'utente
 

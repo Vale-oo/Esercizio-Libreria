@@ -1,3 +1,4 @@
+#scelta 5 e 6 a seconda della lista passata
 #mi permette di visualizzare in output le liste i libri che richiede l'utente
 def visualizzaListe(lista):
 
@@ -10,6 +11,7 @@ def visualizzaListe(lista):
         i = i +1
     print(" ")
 
+#scelta 1
 #mi permette di aggiungere un libro alla lista di libri
 def Aggiungi (listaLibri):
 
@@ -26,9 +28,10 @@ def Aggiungi (listaLibri):
     
         visualizzaListe(listaLibri)
 
-
+#scelta 2
 #mi permette di togliere un libro alla lista di libri e aggioungerlo alla lista degli occupati
 def Prestito (listaLibri, listaPrestati):
+
     visualizzaListe(listaLibri)
     prestitoLibro = input ("Quale libro viene dato in prestito? (Aggiungi i dati) ")
 
@@ -41,6 +44,7 @@ def Prestito (listaLibri, listaPrestati):
 
         print("Libro non presente nella lista")
 
+#scelta 3
 #mi permette di aggiungere un libro alla lista di libri e toglierlo alla lista degli occupati
 def Riporta(listaLibri, listaPrestati):
 
@@ -55,6 +59,7 @@ def Riporta(listaLibri, listaPrestati):
 
         print("Mi sa che hai sbagliato biblioteca.")
 
+#scelta 4
 #mi permette di vedere la disponibilità di un libro specifico
 def DisponibilitàLibro(listaLibri, listaPrestati):
 
@@ -77,7 +82,7 @@ def DisponibilitàLibro(listaLibri, listaPrestati):
 
         print("Il libro non si trova nel nostro database, mi spiace\n")
 
-#operazioni possibili
+#operazioni possibili a seconda di "scelta"
 def Operazioni(scelta, listaLibri, listaPrestati):
     if scelta == "1" :
         Aggiungi(listaLibri)
